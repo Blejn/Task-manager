@@ -84,7 +84,7 @@ public class TaskManager {
 
     }
 
-    private static void removeTask(String[][] table, int number) {
+    private static void removeTask(String[][] table, int number) {  //usuwanie danych
         try {
             if (number < table.length) {
                 tabTasks = ArrayUtils.remove(table, number);
