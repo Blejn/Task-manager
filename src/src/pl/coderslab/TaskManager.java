@@ -142,4 +142,24 @@ public class TaskManager {
         printTab(tab);
     }
 
+     public static  void saveTabToFile(String fileName,String[][] tab){
+
+        Path dir=Paths.get(fileName);
+        String[] lines = new String[tasks.length];
+        for (int i=0;i<tab.length;i++){
+            lines[i]=String.join(",",tab[i]);
+        }
+        try{
+            Files.write(dir,Arrays.asList(lines));
+        }
+        catch (IOException ex){
+            ex.printStackTrace();
+        }
+
+     }
+
+
+
+
+
 }
